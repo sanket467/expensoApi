@@ -7,5 +7,5 @@ import com.expenso.entity.UserEntity;
 
 @Repository
 public interface UserRepository extends MongoRepository<UserEntity, Long> {
-	public UserEntity findByName(String name);
+	public UserEntity findByUname(String name);
 }

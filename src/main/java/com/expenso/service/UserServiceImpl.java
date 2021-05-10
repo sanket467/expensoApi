@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
 	public ResponseEntity<?> loginUser(User user) {
 		JSONObject result = new JSONObject();
 		
-		UserEntity savedUser = userRepository.findByName(user.getUname());
+		UserEntity savedUser = userRepository.findByUname(user.getUname());
 		
 		if(StringUtils.isEmpty(savedUser)) {
 			result.put("message", "EXCEPTION");
