@@ -38,7 +38,7 @@ public class ExpensoApiController implements ExpensoApi {
 	}
 
 	@Override
-	public ResponseEntity<?> getArticle(@RequestBody User user) {
+	public ResponseEntity<?> getArticle() {
 		return articleService.getArticle();
 	}
 

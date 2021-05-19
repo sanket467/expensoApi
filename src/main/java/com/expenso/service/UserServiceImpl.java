@@ -41,13 +41,13 @@ public class UserServiceImpl implements UserService {
 		if(StringUtils.isEmpty(savedUser)) {
 			result.put("message", "EXCEPTION");
 			result.put("description", "USER DOES NOT EXIST");
-			return new ResponseEntity<>(result, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(result, HttpStatus.OK);
 		}
 		
 		if(!user.getPassword().equals(savedUser.getPassword())) {
 			result.put("message", "EXCEPTION");
 			result.put("description", "PASSWORD DOES NOT MATCH");
-			return new ResponseEntity<>(result, HttpStatus.NOT_FOUND);
+			return new ResponseEntity<>(result, HttpStatus.OK);
 		}
 		
 		result.put("user", savedUser);

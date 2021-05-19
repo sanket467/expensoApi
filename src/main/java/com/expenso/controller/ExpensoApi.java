@@ -18,7 +18,7 @@ public interface ExpensoApi {
 	@CrossOrigin
 	ResponseEntity<?> addUser(@RequestBody User user);
 	
-	@GetMapping(value = "/loginUser",produces = "application/json;charset=UTF-8" , consumes = 
+	@PostMapping(value = "/loginUser",produces = "application/json;charset=UTF-8" , consumes = 
 			"application/json;charset=UTF-8")
 	@CrossOrigin
 	ResponseEntity<?> loginUser(@RequestBody User user);
@@ -28,8 +28,7 @@ public interface ExpensoApi {
 	@CrossOrigin
 	ResponseEntity<?> postArticle(@RequestBody Article article);
 	
-	@GetMapping(value ="/article",produces = "application/json;charset=UTF-8" , consumes = 
-			"application/json;charset=UTF-8")
+	@GetMapping(value ="/article")
 	@CrossOrigin
-	ResponseEntity<?> getArticle(@RequestBody User user);
+	ResponseEntity<?> getArticle();
 }
